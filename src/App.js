@@ -1,12 +1,12 @@
 import './App.css';
-// import dotnev from 'dotenv'
+import dotnev from 'dotenv';
 import { useState } from 'react';
 import { Configuration, OpenAIApi } from 'openai';
-// dotnev.config();
+dotnev.config();
 
 function App() {
 	const configuration = new Configuration({
-		apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+		apiKey: process.env.OPENAI_API_KEY,
 	});
 	const openai = new OpenAIApi(configuration);
 
